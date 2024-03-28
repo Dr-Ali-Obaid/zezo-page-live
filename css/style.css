@@ -1,0 +1,393 @@
+:root {
+    --black: #000;
+    --green: #9bcab8;
+    --gray: #eaeaea;
+    --gray-dark: #676767;
+    --secondary: #ca9bad;
+    --radios: 5px;
+    --shadow: 0px 4px 10px #bdbdbd;
+
+}
+
+@font-face {
+    font-family: "Almarai";
+    src: url(../fonts/Almarai-Regular.ttf);
+}
+
+body {
+    font-size: 16px;
+    color: var(--black);
+    background-color: var(--gray);
+    direction: rtl;
+    margin: 0 !important;
+    overflow-x: hidden;
+    font-family: "Almarai", sans-serif;
+}
+
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+.cover {
+    width: 100%;
+    background-color: var(--green);
+    padding: 40px 20px;
+}
+
+.cover__container {
+    width: 100%;
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: var(--radios);
+    padding: 6px;
+}
+
+.cover-image {
+    width: 250px;
+    height: 250px;
+    border-radius: var(--radios);
+    position: relative;
+}
+
+.cover-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cover-info {
+    width: calc(100% - 250px);
+    position: relative;
+    padding: 0 30px;
+}
+
+.cover-info h1 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.cover-info p {
+    font-size: 18px;
+    line-height: 33px;
+    margin-bottom: 0;
+    text-align: justify;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: 100%;
+    min-height: 350px;
+    border-radius: var(--radios);
+    padding: 15px 20px;
+    background-color: white;
+    box-shadow: var(--shadow);
+}
+
+.card>h2 {
+    font-size: bold;
+    border-bottom: 1px solid #d4d4d4;
+    margin: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.line {
+    display: flex;
+    flex-direction: column;
+}
+
+.line:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.line-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.line-head i {
+    margin-left: 10px;
+    color: var(--secondary);
+}
+
+.line-head h3 {
+    margin: 0;
+}
+
+.line-head h4 {
+    width: 100%;
+    margin: 6px 0 0 0;
+    color: var(--secondary);
+}
+
+.line-body {
+    margin: 0;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+.page-body {
+    width: 100%;
+    padding: 50px 20px;
+}
+
+.page-body__container {
+    width: 100%;
+    max-width: 1170px;
+    margin: auto;
+}
+
+.skills__holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.skill:not(:nth-last-child(-n+2)) {
+    margin-bottom: 20px;
+}
+
+.skill__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill__info__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skill__info__head h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.skill__info__head span {
+    font-weight: bold;
+}
+
+.skill__info__bar {
+    position: relative;
+    width: 100%;
+    height: 15px;
+    margin-top: 15px;
+    background-color: var(--gray);
+
+}
+
+.skill__info__bar .layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+
+    transition: all 0.5s ease;
+}
+
+.skill:hover .layer {
+    background-color: var(--secondary) !important;
+}
+
+.skill:hover .skill__icon i {
+    color: var(--green);
+}
+
+.media-holder {
+    width: 100%;
+    height: 500px;
+}
+
+.media-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.media-holder video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.review-holder {
+    height: 350px;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-holder>p {
+    position: relative;
+    font-size: 18px;
+    margin: 0;
+    padding-right: 20px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.review-holder>p::after {
+    content: '”';
+    position: absolute;
+    color: #848484;
+    top: 11px;
+    right: -15px;
+    height: 40px;
+    width: 20px;
+    font-size: 77px;
+
+}
+
+.review-holder>h3 {
+    margin: 10px 0 0 0;
+    font-size: 20px;
+}
+
+.slides-container {
+    position: relative;
+}
+
+.slides-buttons {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.slides-buttons span {
+    padding: 0 20px;
+}
+
+.next i,
+.prev i {
+    cursor: pointer;
+    color: var(--black);
+    font-size: 40px;
+    width: auto;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+
+#reviews .slides-buttons span {
+    padding: 0 10px;
+}
+
+.contact-desc {
+    font-size: 18px;
+    color: var(--gray-dark);
+}
+
+footer {
+    padding: 20px;
+    background-color: var(--black);
+}
+
+footer p {
+    color: white;
+    text-align: center;
+}
+
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media(min-width: 900px) {
+    .card--half {
+        width: 48%;
+    }
+
+    .skill {
+        width: 48%;
+    }
+
+    .card--full {
+        width: 100% !important;
+    }
+
+    .row:not(:last-of-type) {
+        margin-bottom: 45px;
+    }
+}
+
+@media(max-width: 900px) {
+    .card {
+        margin-bottom: 30px;
+    }
+
+    .cover__container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .cover-info {
+        width: 100%;
+        padding: 0;
+    }
+
+    .cover-info h1 {
+        margin-top: 20px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .skill:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .media-holder img {
+
+        object-fit: contain;
+    }
+
+}
